@@ -1,0 +1,74 @@
+﻿# Rime schema
+# vim: set sw=2 sts=2 et:
+# encoding: utf-8
+
+schema:
+  schema_id: avestan
+  name: "Avestan Input"
+  version: "2024.4.14"
+  author:
+    - droniye <leungh24@gmail.com>
+  description: |
+    用qwerty鍵盤輸入阿維斯塔文，
+    如有改進建議，歡迎和作者聯繫！
+    Type Avestan using Qwerty keyboard;
+    for suggestions and bug fixes, feel
+    free to email the author
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ Avestan, Latin ]
+
+engine:
+  processors:
+    - ascii_composer
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+#    - reverse_lookup_translator
+    - table_translator
+
+menu:
+  alternative_select_keys: "123456789"
+
+speller:
+  alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ;'',-`".'
+  delimiter: ''
+  auto_select: true
+
+translator:
+  dictionary: avestan
+  enable_user_dict: false
+  enable_sentence: false
+  comment_format:
+    - xform/^~(.*)$/$1/
+
+abc_segmentor:
+#  extra_tags:
+#    - reverse_lookup
+
+reverse_lookup:
+  dictionary: latin_international
+  prefix: "`"
+  tips: 〔Lat〕
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*$"
+
+punctuator:
+  use_space: true
+  half_shape: &punct
+    ' ' : { commit: ' ' }
+  full_shape: *punct
