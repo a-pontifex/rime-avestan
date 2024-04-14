@@ -42,7 +42,7 @@ menu:
   alternative_select_keys: "123456789"
 
 speller:
-  alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ;'',-`".'@
+  alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ;'',-`".'\@~
   delimiter: ''
   auto_select: true
 
