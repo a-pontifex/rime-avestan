@@ -1,7 +1,28 @@
 # Avestan input method for Rime
 ## 中州韻阿維斯塔語輸入法
 
+## Installation instructions
+
+### Installing RIME (if you don't already have it)
+- See the instructions on the [official website](https://rime.im/download/) 參見[官網](https://rime.im/download/)教程。
+### Installing ``rime-avestan``
+#### On MacOS X and Linux:
+- **Install [``/plum/``](https://github.com/rime/plum) to import keymaps and input methods.** Go to the command line and type
+```curl -fsSL https://raw.githubusercontent.com/rime/plum/master/rime-install | bash```
+- To install the ``rime-avestan`` package, ``cd`` into the directory where the ``plum`` installation is located and type ```bash rime-install a-pontifex/rime-avestan```
+
+#### On Windows:
+- Switch to Rime as your keyboard layout.
+- Right-click the icon that either says A or 中 and click '輸入法設定(S)'.
+- Click the button 獲取更多輸入方案 on the bottom-left corner of the dialog box, which will redirect you to the inbuilt ``plum`` command line.
+- Type ``a-pontifex/rime-avestan`` into the command-line.
+- Close the command line window after it finishes installing the package.
+- Select Avestan Input in the dialogue box.
+### Selecting ``rime-avestan`` as your input method
+- press Control-grave on your keyboard, use your arrow keys to select 'Avestan Input' and press enter to switch to Avestan.
+- Press shift to alternate between Avestan and ASCII.
 ## Alphabet 字母表
+The transcription is **case-sensitive**.
 ### Vowels 元音
 
 |Avestan|transcription|
