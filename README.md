@@ -33,8 +33,8 @@ The transcription is **case-sensitive**.
 |𐬃|AA|
 |𐬄|a~|
 |𐬅|aa~|
-|𐬆|@|
-|𐬇|@@|
+|𐬆|E|
+|𐬇|EE|
 |𐬈|e|
 |𐬉|ee|
 |𐬊|o|
